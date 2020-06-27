@@ -1,0 +1,419 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: radial-gradient(gray,  black);
+  font-family: 'Srisakdi', cursive;
+  font-family: 'Merriweather', serif;
+  /* background-image: url("images/Falling-Coins.png"); */
+}
+
+.container {
+    /* height: 100%; */
+    /* overflow-x: hidden;
+    overflow-y: auto; */
+    /* perspective: 2px; */
+    background: radial-gradient(black, gray);
+    /* The image used */
+    background-image: url("images/bitcoin.png");
+    /* Set a specific height */
+    height: 800px; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1100px;
+}
+
+.row {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.headline1 {
+  background-color: lightgray;
+  border-bottom: 3px solid black;
+  /* width: 100%; */
+  /* position: relative; */
+}
+
+.headline1 .head {
+  font-size: 20px;
+  float: left;
+  text-align: left;
+  margin-top: 95px;
+}
+
+.headline1 img {
+  width: 80%;
+  float: left;
+}
+
+.parallax::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    transform: translateZ(-1px) scale(1.5);
+    background-size: 100%;
+    z-index: -1;
+} 
+
+.headline div {
+    position: relative;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 5px #000;
+} 
+
+
+
+.navbar {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 40px;
+  border: 1px solid black;
+  box-shadow: 5px 10px #060606;
+}
+
+.nav-link {
+  margin-left: 20px;
+  color: white!important;
+}
+
+nav img {
+  width: 7%;
+}
+
+.home {
+  width: 100%;
+  display: block;
+}
+
+.card {
+  float: left;
+  width: 327px;
+  height: 425px;
+  margin: 5px;
+  border-radius: 50px;
+  margin: 16px;
+  background-image: radial-gradient(white, gray);
+  box-shadow: 5px 10px #3e3c3c;
+  border: 1px solid black;
+}
+
+.text-head1 {
+  height: 80px;
+  font-weight: bold;
+  font-size: 20px;
+  display: inline-block;
+}
+
+.text-body1 {
+    height: 200px;
+    font-size: 26px;
+    font-weight: 900;
+}
+
+/* .card-footer{
+    background-color: blue!important;
+    width: 125px!important;
+} */
+.info {
+  margin: 31px 13px;
+}
+
+#small_gif {
+  width: 40px;
+}
+
+#large_gif {
+  margin: 50px 40%;
+  width: 400px;
+}
+
+h5 {
+  cursor: pointer;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 65px;
+  height: 35px;
+  margin-left: 230px;
+  margin-top: 35px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: black;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #000000;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#popup {
+  font-family: Montserrat;
+  position: fixed;
+  margin: 0 35%;
+  margin-top: 100px;
+  width: 700px;
+  height: 550px;
+  padding: 30px;
+  text-align: center;
+  border-radius: 80px;
+  color: #000000;
+  -webkit-box-shadow: rgb(0, 0, 0) 0px 3px 10px, rgb(0, 0, 0) 0 0 70px inset;
+  -moz-box-shadow:rgb(0, 0, 0) 0px 3px 10px, rgb(0, 0, 0) 0 0 70px insett;
+  box-shadow: rgb(4, 4, 4) 0px 3px 10px, rgb(49, 49, 49) 0 0 70px inset;
+  background: #ce0202;
+  background: -moz-linear-gradient(top, #ce0202, #7e0101e3);
+  background: -webkit-linear-gradient(top, #ce0202, #7e0101e3);
+  background: -ms-linear-gradient(top, #ce0202, #7e0101e3);
+  background: -o-linear-gradient(top, #ce0202, #7e0101e3);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce0202', endColorstr='#7e0101e3', GradientType=0);
+  background: linear-gradient(to bottom, #7b7b7b, #000000f2);
+  border-top: 1px solid rgb(51, 51, 51);
+  overflow: hidden;
+  z-index: 9999;
+  display: none;
+}
+
+#popup h1 {
+  text-align: center;
+  margin: 0;
+  font-size: 25px;
+  letter-spacing: -1px;
+  margin-bottom: 4px;
+  text-shadow: 0 -1px 1px #000, 0 0px 5px rgba(0, 0, 0, 0.25);
+}
+
+#popup p {
+  margin-top: 7px 0 25px;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  text-shadow: 0 0px 5px rgba(0, 0, 0, 0.25), 0 -1px 1px #000;
+}
+
+.no {
+  margin-right: 50px !important;
+  background: rgb(163, 151, 175) !important;
+  display: block;
+  padding: 15px 35px;
+  float: right;
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  border-top: 1px solid rgba(59, 3, 3, 0.267);
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-box-shadow: rgba(59, 3, 3, 0.267) 0 2px 1px, rgba(0, 0, 0, 0.3) 0 -2px 1px, rgba(0, 0, 0, 0.5) 0px 3px 10px, rgba(50, 42, 0, 0.75) 0 0 40px inset;
+  -moz-box-shadow: rgba(59, 3, 3, 0.267) 0 2px 1px,
+rgba(0, 0, 0, 0.3) 0 -2px 1px, rgba(0, 0, 0, 0.5) 0px 3px 10px,
+rgba(50, 42, 0, 0.75) 0 0 40px inset;
+  box-shadow: rgba(59, 3, 3, 0.267) 0 2px 1px, rgba(0, 0, 0, 0.3) 0 -2px 1px, rgba(0, 0, 0, 0.5) 0px 3px 10px, rgba(50, 42, 0, 0.75) 0 0 40px inset;
+  text-shadow: 0 0 10px #000;
+  border-radius: 50px;
+  background: #bfd255;
+  background: -webkit-linear-gradient(
+top,
+#bfd255 0%,
+rgb(250, 246, 15) 50%,
+rgb(250, 246, 15) 51%,
+#fffb00 100%
+);
+  background: -moz-linear-gradient(
+top,
+#bfd255 0%,
+rgb(250, 246, 15) 50%,
+rgb(250, 246, 15) 51%,
+#fffb00 100%
+);
+  background: -ms-linear-gradient(
+top,
+#bfd255 0%,
+rgb(250, 246, 15) 50%,
+rgb(250, 246, 15) 51%,
+#fffb00 100%
+);
+  background: -o-linear-gradient(
+top,
+#bfd255 0%,
+rgb(250, 246, 15) 50%,
+rgb(250, 246, 15) 51%,
+#fffb00 100%
+);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bfd255', endColorstr='#fffb00', GradientType=0);
+  background: linear-gradient(
+to bottom,
+#bfd255 0%,
+rgb(250, 246, 15) 50%,
+rgb(250, 246, 15) 51%,
+#fffb00 100%
+);
+}
+
+.cover {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: none;
+}
+
+.choice{
+    text-align: left;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.choice-switch .slider{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.choice-switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.choice-switch input:checked + .slider {
+  background-color: #000000;
+}
+
+.choice-switch input:focus + .slider {
+  box-shadow: 0 0 1px #000000;
+}
+
+.choice-switch input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.choice-switch .slider.round {
+  border-radius: 34px;
+  width: 64px;
+  height: 35px;
+  margin-left: 30px;
+}
+
+.choice-switch .slider.round:before {
+  border-radius: 50%;
+}
+
+
+.form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    margin-left: 280px;  
+    border-radius: 18px;
+}
+
+.btn {
+  border-radius: 10px;
+}
+
+.btn-nav {
+  margin-left: 20px;
+}
+
+.card-header:first-child {
+  border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.div-info {
+  margin-left: 38px!important;
+  margin-top: -5px;
+}
+
+.about {
+  display: none;
+  background-image: radial-gradient(circle, white, grey);
+  margin-top: 20px;
+  border-radius: 30px;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+
+}
+
